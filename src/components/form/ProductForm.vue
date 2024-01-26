@@ -281,7 +281,7 @@ form input {
   }
   .column {
     display: flex;
-    align-items: start;
+    align-items: center;
     margin-top: 0;
   }
 

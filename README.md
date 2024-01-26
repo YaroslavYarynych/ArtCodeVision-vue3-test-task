@@ -1,18 +1,62 @@
-# Vue 3 + TypeScript + Vite
+# ArtCodeVision test task
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+It is a simple, user-friendly app where you can interact with products from an
+open API.
 
-## Recommended IDE Setup
+## Links:
 
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+-[DEMO](https://yaroslavyarynych.github.io/ArtCodeVision-vue3-test-task/) -[Solution](https://github.com/YaroslavYarynych/ArtCodeVision-vue3-test-task)
 
-## Type Support For `.vue` Imports in TS
+## Requirements:
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin) to make the TypeScript language service aware of `.vue` types.
+- Work with dummyJSON documentation.
+- Application must have 3 pages:
+- Home: Display products, search by name, sort by rating and title, pagination (optional).
+- Product Details: Display product info, update and delete buttons.
+- Create Product: Form to create new product.
+- All pages must have header with logo redirecting to home and 'Create' button redirecting to product creation.
 
-If the standalone TypeScript plugin doesn't feel fast enough to you, Volar has also implemented a [Take Over Mode](https://github.com/johnsoncodehk/volar/discussions/471#discussioncomment-1361669) that is more performant. You can enable it by the following steps:
+## Build With
 
-1. Disable the built-in TypeScript Extension
-   1. Run `Extensions: Show Built-in Extensions` from VSCode's command palette
-   2. Find `TypeScript and JavaScript Language Features`, right click and select `Disable (Workspace)`
-2. Reload the VSCode window by running `Developer: Reload Window` from the command palette.
+- Vue3 (Composition API)
+- Vuex
+- Vuelidate (for form validation)
+- TypeScript
+
+## Setup
+
+1. Use 20 version of node.js: <br>
+
+```sh
+$ nvm use 20
+```
+
+2. Clone the repository to your local machine, open terminal (GitBash for Windows users) and clone repo with command bellow:
+
+```sh
+git clone https://github.com/YaroslavYarynych/ArtCodeVision-vue3-test-task.git
+```
+
+3. Open editor, set up project and install necessary packages in the code-editor you use:
+
+```sh
+$ npm install
+```
+
+4. Open the project in browser:
+
+```sh
+$ npm run dev
+```
+
+4. Bulid project:
+
+```sh
+$ npm run build
+```
+
+## Author
+
+- GitHub - [YaroslavYarynych](https://github.com/YaroslavYarynych)
+- Telegram - [Slavik_Yarynych](https://t.me/Slavik_Yarynych)
+- LinkedIn - [Yaroslav Yarynych](https://www.linkedin.com/in/yaroslav-yarynych-87856722a/)

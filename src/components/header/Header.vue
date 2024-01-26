@@ -43,13 +43,14 @@ import { RouterLink } from 'vue-router';
 .logo {
   height: 100%;
   display: none;
+  transition: all 0.5s;
 }
 
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+.logo {
+  transition: all 0.5s;
 }
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
+.logo:hover {
+  box-shadow: 0px 5px 10px rgba(255, 165, 0, 0.5);
 }
 
 .header__link:hover {
