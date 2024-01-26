@@ -2,6 +2,7 @@ import { createWebHistory, createRouter } from 'vue-router';
 import HomeView from '../views/homeView/HomeView.vue';
 import CreateView from '../views/createView/CreateView.vue';
 import ProductDetailsView from '../views/productDetailsView/ProductDetailsView.vue';
+import NotFoundPageVue from '../views/notFoundPage/NotFoundPage.vue';
 
 export const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -9,22 +10,22 @@ export const router = createRouter({
     {
       path: '/',
       name: 'home',
-      component: () => HomeView,
+      component: HomeView,
     },
     {
       path: '/create',
       name: 'create',
-      component: () => CreateView,
+      component: CreateView,
     },
     {
       path: '/product/:id',
       name: 'details',
-      component: () => ProductDetailsView,
+      component: ProductDetailsView,
     },
     {
       path: '/:pathMatch(.*)*',
       name: 'not-found-page',
-      component: () => 1,
+      component: NotFoundPageVue,
     },
   ],
 });
