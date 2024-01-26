@@ -24,7 +24,6 @@ onMounted(async () => {
     const data = await getData();
     store.commit('set', data);
   }
-  console.log('mounted');
 });
 
 const getFilteredAndSortedData = computed(() => {
@@ -70,7 +69,7 @@ const getFilteredAndSortedData = computed(() => {
 </script>
 
 <template>
-  <main>
+  <div class="home-container">
     <div class="search-container">
       <input v-model="searchTerm" placeholder="Search by name" />
       <div class="sort">
@@ -95,11 +94,11 @@ const getFilteredAndSortedData = computed(() => {
       </div>
     </div>
     <div v-else>Data is loading...</div>
-  </main>
+  </div>
 </template>
 
 <style scoped>
-main {
+.home-container {
   display: flex;
   flex-direction: column;
   justify-content: center;

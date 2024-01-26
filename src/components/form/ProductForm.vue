@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed, reactive } from 'vue';
 import useVueLidate from '@vuelidate/core';
-import { required, minLength } from '@vuelidate/validators';
+import { required, minLength, helpers, numeric } from '@vuelidate/validators';
 import Button from '../button/Button.vue';
 import BaseInput from '../form/BaseInput.vue';
 
@@ -25,16 +25,19 @@ const rules = computed(() => {
   return {
     title: { required, minLength: minLength(5) },
     description: { required, minLength: minLength(10) },
-    price: { required, minLength: minLength(1) },
-    rating: { required },
-    discountPercentage: { required },
-    stock: { required },
+    price: { required, numeric, minLength: minLength(1) },
+    rating: { required, numeric },
+    discountPercentage: { required, numeric },
+    stock: { required, numeric },
     brand: { required },
     category: { required },
-    thumbnail: { required, minLength: minLength(10) },
+    thumbnail: {
+      required,
+      minLength: minLength(10),
+      rfc: helpers.regex(/(http[s]*:\/\/)/i),
+    },
   };
 });
-
 const originalData = { ...props.emplyData };
 
 let formData = reactive(props.emplyData);

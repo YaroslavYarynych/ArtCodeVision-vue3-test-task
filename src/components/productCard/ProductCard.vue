@@ -19,7 +19,12 @@ const discountPrice = Math.round(
       :to="{ name: 'details', params: { id: item.id } }"
       class="link"
     >
-      <img :src="item.thumbnail" alt="" class="product__image" />
+      <img
+        :src="item.thumbnail"
+        alt=""
+        @error="($event.target as HTMLImageElement).src = './favicon.png'"
+        class="product__image"
+      />
     </router-link>
     <router-link
       :to="{ name: 'details', params: { id: item.id } }"
