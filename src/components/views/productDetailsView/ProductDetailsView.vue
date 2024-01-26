@@ -28,15 +28,16 @@ const dataFromServer = ref<Card | null>(null);
 let discountPrice = 0;
 
 const formData = reactive({
-  title: dataFromServer.value?.title,
-  description: dataFromServer.value?.description,
-  price: dataFromServer.value?.price,
-  rating: dataFromServer.value?.rating,
-  discountPercentage: dataFromServer.value?.discountPercentage,
-  stock: dataFromServer.value?.stock,
-  brand: dataFromServer.value?.brand,
-  category: dataFromServer.value?.category,
-  thumbnail: dataFromServer.value?.thumbnail,
+  title: dataFromServer.value?.title || 'Error',
+  description: dataFromServer.value?.description || 'Error',
+  price: dataFromServer.value?.price.toString() || '0',
+  rating: dataFromServer.value?.rating.toString() || '0',
+  discountPercentage:
+    dataFromServer.value?.discountPercentage.toString() || '0',
+  stock: dataFromServer.value?.stock.toString() || '0',
+  brand: dataFromServer.value?.brand || 'Error',
+  category: dataFromServer.value?.category || 'Error',
+  thumbnail: dataFromServer.value?.thumbnail || 'Error',
 });
 
 onMounted(async () => {
