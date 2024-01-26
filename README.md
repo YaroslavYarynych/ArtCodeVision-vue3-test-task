@@ -5,7 +5,8 @@ open API.
 
 ## Links:
 
--[DEMO](https://yaroslavyarynych.github.io/ArtCodeVision-vue3-test-task/) -[Solution](https://github.com/YaroslavYarynych/ArtCodeVision-vue3-test-task)
+- [DEMO](https://yaroslavyarynych.github.io/ArtCodeVision-vue3-test-task/)
+- [Solution](https://github.com/YaroslavYarynych/ArtCodeVision-vue3-test-task)
 
 ## Requirements:
 
